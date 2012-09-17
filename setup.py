@@ -11,6 +11,9 @@ setup(name='bash-powerprompt',
       url='https://github.com/MrHaas/bash-powerprompt',
       packages=['powerprompt'],
       scripts=['powerprompt/bin/bashpowerprompt.py'],
+      install_requires=[
+        'sh',
+      ],
       classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Environment :: Console',
