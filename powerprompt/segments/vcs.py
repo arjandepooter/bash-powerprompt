@@ -30,11 +30,13 @@ class VcsSegment(BaseSegment):
         return self.vcs_type is not None
 
     def get_git_status(self):
-        states = sh.git.status('-s', '-b').stdout.split('\n')
+        states = sh.git.status('-s', '-b').stdout.strip().split('\n')
         content = states[0][3:].strip()
 
         changes = {}
         for state in states[1:]:
+            if state.startswith('nothing to commit'):
+                break
             code = state[0:2].strip()
             if not code in changes:
                 changes[code] = 0
