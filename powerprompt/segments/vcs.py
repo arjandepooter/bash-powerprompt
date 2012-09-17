@@ -31,7 +31,7 @@ class VcsSegment(BaseSegment):
 
     def get_git_status(self):
         states = sh.git.status('-s', '-b').stdout.strip().split('\n')
-        content = states[0][3:].strip()
+        content = states[0][3:].strip().split('...')[0]
 
         changes = {}
         for state in states[1:]:
