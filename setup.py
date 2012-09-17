@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(name='bash-powerprompt',
       version='0.1.0',
-      description='Powerful bash prompt based on Vim Powerline',
+      description='Powerful dynamic bash prompt inspired by Vim Powerline',
       long_description=open('README.rst', 'r').read(),
       author='Arjan de Pooter',
       author_email='mail@arjandepooter.nl',
