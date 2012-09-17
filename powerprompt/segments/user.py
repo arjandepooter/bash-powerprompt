@@ -3,7 +3,7 @@ from powerprompt.core import ColorBlock
 from powerprompt.segments import BaseSegment
 import os
 
-class RootSegment(BaseSegment):
+class UserSegment(BaseSegment):
     name = 'user'
 
     def is_usable(self):

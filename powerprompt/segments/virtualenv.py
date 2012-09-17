@@ -3,7 +3,7 @@ from powerprompt.core import ColorBlock
 from powerprompt.segments import BaseSegment
 import os
 
-class CwdSegment(BaseSegment):
+class VirtualenvSegment(BaseSegment):
     name = 'virtualenv'
 
     def is_usable(self):
